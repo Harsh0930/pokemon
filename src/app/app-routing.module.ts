@@ -4,10 +4,10 @@ import { PokemonViewComponent } from './pokemon-view/pokemon-view.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 
 const routes: Routes = [
-  // {
-  //   path:"pokemon",
-  //   component:PokemonListComponent
-  // },
+  {
+    path:"pokemon",
+    component:PokemonListComponent
+  },
   {
     path:"pokemon/:id",
     component:PokemonViewComponent
