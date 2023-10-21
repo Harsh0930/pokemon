@@ -1,0 +1,22 @@
+<app-header></app-header>
+<section class="main_section container-fluid my-5 d-flex justify-content-center">
+    <section class="card_container container p-4 row" >
+        <!-- column1 -->
+        <section class="col-lg-6 col-md-6 col-sm-12  justify-content-center align-items-center p-3">
+            <p class="pokemons_name text-uppercase fw-bold display-5 mb-0">{{pokemons.name}}</p><br>
+            <hr class="border border-1 border-dark mt-0 rounded-3">
+            <p class="pokemons_description fs-5 "><b class="">Description: </b>{{pokemonSpecies?.flavor_text_entries[0].flavor_text}}</p>
+            <p class="pokemons_egg fs-5 "><b class="">Egg Group: </b>{{pokemonSpecies?.egg_groups[0].name}}</p>
+            <p class="pokemons_color fs-5 "><b class="">Color: </b>{{pokemonSpecies?.color.name}}</p>
+            <p class="pokemons_abilities fs-5 "><b class="">Abilities: </b>{{pokemons?.abilities[0].ability.name}}</p>
+            <p class="pokemons_indices fs-5 "><b class="">Indices: </b>{{pokemons?.game_indices[0].version.name}}</p>
+            <p class="pokemons_moves fs-5 "><b class="">Move: </b>{{pokemons?.moves[0].move.name}}</p>
+            <p class="pokemons_type fs-5"><b class="">Type: </b>{{pokemons?.types[0].type.name}}</p>
+            <p class="pokemons_weight fs-5"><b class="">Weight: </b>{{pokemons?.weight}}</p>
+        </section>
+        <!-- column2  -->
+        <section class="col-lg-6 col-md-6 col-sm-12 d-flex justify-content-center p-3">
+            <img [src]="pokemons?.sprites.other.home.front_default" class="pokemon_img img-fluid d-flex justify-content-center align-items-center my-5">
+        </section>
+    </section>
+</section>

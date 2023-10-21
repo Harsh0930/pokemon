@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+
+html{}
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; background-image: url('../src/assets/bg_pokemon.jpeg');
+background-position: center;
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-blend-mode: darken;
+background-color: rgba(185, 166, 47, 0.4);
+}

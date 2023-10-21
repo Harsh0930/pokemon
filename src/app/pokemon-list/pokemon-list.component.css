@@ -1,0 +1,45 @@
+.card_container{
+background: rgba(255, 255, 255, 0.181);
+box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.256);
+backdrop-filter: blur( 8px );
+-webkit-backdrop-filter: blur( 4px );
+border-radius: 10px;
+height: auto;
+}
+.cards{
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    background-color: #DDFEEE;
+    height:auto;
+}
+.card_images:hover{
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+.pokemon_ball{
+    height: 100px !important;
+    width: 100px !important;
+    animation: rotate 3s linear infinite;
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+border-radius: 50%;
+}
+.pokemon_text{
+    height: 120px;
+    width: 240px;
+}
+.pagination{
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+
+
+
+@keyframes rotate {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+

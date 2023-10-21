@@ -1,0 +1,38 @@
+<app-header></app-header>
+<section class="main_section container-fluid my-5 d-flex justify-content-center">
+    <section class="card_container container p-4 row" >
+        <!-- row -->
+        <section class="item row mb-4 ">
+            <!-- column 1 -->
+            <section class="pokemon_ball_container col-lg-4 col-md-4 col-sm-4 text-center">
+                <img src="../../assets/pokemon_go.png" alt="pokemon_ball" class="pokemon_ball img-fluid">
+            </section>
+            <!-- column 2 -->
+            <section class="pokemon_ball_container col-lg-4 col-md-4 col-sm-4 text-center">
+                <img src="../../assets/pokemon_text.png" alt="pokemon_ball" class="pokemon_text img-fluid">
+            </section>
+            <!-- column 3 -->
+            <section class="pokemon_ball_container col-lg-4 col-md-4 col-sm-4 text-center">
+                <img src="../../assets/pokemon_go.png" alt="pokemon_ball" class="pokemon_ball img-fluid">
+            </section>
+        </section>
+        <div class="col col-lg-3 col-md-4 col-sm-6 mb-3"  *ngFor="let poke of pokemonData | paginate:{itemsPerPage:12,currentPage:page,totalItems:totalPokemon}">
+            <mat-card class="cards rounded-4 my-3 px-3 py-4 ">
+                <img class="card_images img-fluid d-flex justify-content-center mb-4" mat-card-image [src]="poke.sprites.other.home.front_default" alt="">
+                <mat-card-header class="p-0">
+                    <mat-card-title class="text-uppercase fw-semibold"><b>Name: </b>{{poke.name}}</mat-card-title>
+                    <mat-card-subtitle class="text-secondary"><b>Height: </b>{{poke.height}}</mat-card-subtitle>
+                </mat-card-header>
+                <div class="d-flex justify-content-center my-2">
+                <mat-card-actions class="ps-0 mt-2">
+                    <button mat-stroked-button class="read_more_btn text-primary" routerLink="/pokemon/{{poke?.id}}">Read More</button>
+                </mat-card-actions>
+            </div>
+            </mat-card>
+        </div>
+        <div class="loadMoreBtn  d-flex justify-content-center">
+        <button class="load_more btn btn-md btn-outline-dark w-auto fw-normal" (click)="loadMore()">Load More</button>
+        </div>
+    <!-- <pagination-controls class="pagination my4" (pageChange)="page =$event; pokemonData=[]; getPokemons()"></pagination-controls> -->
+    </section>
+</section>
